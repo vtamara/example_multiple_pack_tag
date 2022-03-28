@@ -1,0 +1,27 @@
+<h1>Based on "generated scaffold"</h1>
+<hr/>
+
+
+<%= react_component("HelloWorld", props: @hello_world_props, prerender: false) %>
+
+<hr/>
+
+<p style="color: green"><%= notice %></p>
+
+<h2>Listing Comments</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Author</th>
+      <th>Text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @comments.each do |comment| %>
+      <%= render comment %>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New comment", new_comment_path %>

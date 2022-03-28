@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example of Multiple pack_tag</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag "application.css" %>
+    <%= javascript_pack_tag "application" %>
+    <!--%= javascript_pack_tag "hello_world" %-->
+  </head>
+
+  <body>
+    <%= react_component("NavigationBar", props: @navigationbar_props, prerender: true) %>
+
+    <%= yield %>
+
+    <hr/>
+    <%= react_component("Footer", props: @footer_props, prerender: true) %>
+  </body>
+</html>
