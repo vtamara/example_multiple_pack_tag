@@ -16,10 +16,22 @@
 
 console.log('Hello world from ESM')
 
+import ReactOnRails from 'react-on-rails'
+
 //import 'assets/stylesheets/application.scss'
 import 'assets/stylesheets/application.scss'
 import * as bootstrap from 'bootstrap'
 
 import Footer from '../bundles/comments/layout/Footer'
 import NavigationBar from '../bundles/comments/layout/NavigationBar'
+import HelloWorld from '../bundles/HelloWorld/components/HelloWorld'
 
+ReactOnRails.setOptions({
+  traceTurbolinks: true
+})
+
+ReactOnRails.register({
+  Footer,
+  HelloWorld,
+  NavigationBar,
+})
