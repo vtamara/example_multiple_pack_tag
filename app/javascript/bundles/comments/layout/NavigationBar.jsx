@@ -41,6 +41,9 @@ function NavigationBar(props) {
             <li>
               <a className='nav-link' href="https://forum.shakacode.com/c/reactjs">Forum</a>
             </li>
+            <li className='comment-count'>
+              Comments: {+commentsCount}
+            </li>
           </ul>
         </div>
       </div>
