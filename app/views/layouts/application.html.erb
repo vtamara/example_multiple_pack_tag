@@ -12,11 +12,12 @@
   </head>
 
   <body>
-    <%= react_component("NavigationBar", props: @navigationbar_props, prerender: true) %>
+    <%= react_component("NavigationBar", props: {
+      commentsCount: 0, pathname: '/'}, prerender: true) %>
 
     <%= yield %>
 
     <hr/>
-    <%= react_component("Footer", props: @footer_props, prerender: true) %>
+    <%= react_component("Footer", props: {}, prerender: true) %>
   </body>
 </html>
