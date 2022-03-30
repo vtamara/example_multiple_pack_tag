@@ -7,8 +7,25 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_pack_tag "application.css" %>
+    <!--1-->
     <%= javascript_pack_tag "application" %>
-    <!--%= javascript_pack_tag "hello_world" %-->
+    <!--2-->
+    <%= javascript_pack_tag "application" %>
+    <!--3-->
+    <!--%= javascript_pack_tag "application", defer: false %--> <!-- conflict -->
+    <!--4-->
+    <%= javascript_pack_tag "hello-world-bundle" %>  <!-- no problem -->
+    <!--5-->
+    <%= javascript_pack_tag "hello-world-bundle" %>  <!-- no problem -->
+    <!--6-->
+    <!--%= javascript_pack_tag "hello-world-bundle", defer: false %-->  <!-- conflict -->
+    <!--7-->
+    <!--%= javascript_pack_tag "show-time-bundle", defer: false %-->  <!-- conflict, runtime.js already emitted with defer=true -->
+    <!--8-->
+    <%= javascript_pack_tag "show-time-bundle", defer: true %>  <!-- no problem -->
+    <!--9-->
+    <%= javascript_pack_tag "show-time-bundle" %>  <!-- no problem-->
+    <!--10-->
   </head>
 
   <body>
@@ -18,6 +35,6 @@
     <%= yield %>
 
     <hr/>
-    <%= react_component("Footer", props: {}, prerender: true) %>
+    <%= react_component("Footer", props: {}, prerender: false) %>
   </body>
 </html>

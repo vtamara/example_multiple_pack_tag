@@ -2,7 +2,9 @@
 <hr/>
 
 
-<%= react_component("HelloWorld", props: @hello_world_props, prerender: false) %>
+<%= react_component("HelloWorld", props: {name: 'stranger1'}, prerender: false) %>
+
+<%= react_component("ShowTime", props: {}, prerender: false) %>
 
 <hr/>
 

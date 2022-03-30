@@ -24,7 +24,6 @@ import * as bootstrap from 'bootstrap'
 
 import Footer from '../bundles/comments/layout/Footer'
 import NavigationBar from '../bundles/comments/layout/NavigationBar'
-import HelloWorld from '../bundles/HelloWorld/components/HelloWorld'
 
 ReactOnRails.setOptions({
   traceTurbolinks: true
@@ -32,6 +31,5 @@ ReactOnRails.setOptions({
 
 ReactOnRails.register({
   Footer,
-  HelloWorld,
   NavigationBar,
 })
