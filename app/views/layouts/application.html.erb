@@ -22,10 +22,7 @@
     <!--7-->
     <!--%= javascript_pack_tag "show-time-bundle", defer: false %-->  <!-- conflict, runtime.js already emitted with defer=true -->
     <!--8-->
-    <%= javascript_pack_tag "show-time-bundle", defer: true %>  <!-- no problem -->
-    <!--9-->
-    <%= javascript_pack_tag "show-time-bundle" %>  <!-- no problem-->
-    <!--10-->
+    <%= render partial: 'layouts/show_time_headers' %>
   </head>
 
   <body>

@@ -35,7 +35,7 @@ gem "bootsnap", require: false
 
 gem 'dotenv-rails'
 
-gem 'shakapacker'#, path: '../shakapacker'
+gem 'shakapacker', path: '../shakapacker'
 
 gem 'foreman'
 

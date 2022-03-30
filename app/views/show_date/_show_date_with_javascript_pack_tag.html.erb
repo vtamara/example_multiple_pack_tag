@@ -1,0 +1,7 @@
+<%= javascript_pack_tag "show-date-bundle" %> <!-- No problem -->
+<%= javascript_pack_tag "show-date-bundle" %> <!-- No problem -->
+<%= javascript_pack_tag "show-time-bundle" %> <!-- No problem -->
+<!--%= javascript_pack_tag "show-date-bundle", defer: false %--> <!-- Conflict -->
+
+Date:
+<%= react_component("ShowDate", props: {}, prerender: false) %>
