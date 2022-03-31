@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 //import CommentsCount from './CommentsCount.jsx';
 //import * as paths from '../../constants/paths';
 
-function NavigationBar(props) {
+const NavigationBar = (props) => {
   const { commentsCount, pathname } = props;
 
   /* eslint-disable new-cap */

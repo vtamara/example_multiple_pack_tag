@@ -2,7 +2,7 @@ import React from 'react'
 
 export default class ShowDate extends React.Component {
 
-  render() {
+  render = () => {
     return(
       <div>
       {new Date().toLocaleDateString()}

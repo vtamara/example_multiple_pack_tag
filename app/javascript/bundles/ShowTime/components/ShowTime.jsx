@@ -12,15 +12,15 @@ export default class ShowTime extends React.Component {
     )}
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.timer = setInterval(() => this.anotherSecond(), 1000)
   }
 
-  componentWillUnmount() {
+  componentWillUnmount = () => {
     clearInterval(this.timer)
   }
 
-  anotherSecond() {
+  anotherSecond = () => {
     this.setState({
       time: new Date().toLocaleTimeString(
         this.locale, {timeZone: this.timeZone}
@@ -28,7 +28,7 @@ export default class ShowTime extends React.Component {
     })
   }
 
-  render() {
+  render = () => {
     return(
       <div>
       {this.state.time} ({this.timeZone})

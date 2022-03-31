@@ -5,8 +5,7 @@ import css from './Footer.module.scss';
 
 export default class Footer extends React.Component {
 
-  render() {
-
+  render = () => {
     return (
       <footer>
         <div className="container footer row">
