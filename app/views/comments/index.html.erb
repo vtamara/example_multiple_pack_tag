@@ -4,7 +4,9 @@
 
 <%= react_component("HelloWorld", props: {name: 'stranger1'}, prerender: false) %>
 
-<%= react_component("ShowTime", props: {}, prerender: false) %>
+<%= react_component("ShowTime", props: {locale: 'en-US', timeZone: 'HST'}, prerender: false) %>
+
+<%= react_component("ShowTime", props: {locale: 'es-CO', timeZone: 'America/Bogota'}, prerender: false) %>
 
 <%= render partial: 'show_date/show_date_with_javascript_pack_tag' %>
 
