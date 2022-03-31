@@ -1,4 +1,6 @@
 #!/bin/sh
 # Start in development mode
 
+rm -rf tmp/*
+rm -rf public/packs/*
 bundle exec foreman start -f Procfile.dev
